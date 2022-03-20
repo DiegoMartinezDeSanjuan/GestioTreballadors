@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
 
 # Create your views here.
-from Projecte.models import Project
+from Projecte.models import Project, Worker
 
 
 class HomeView(TemplateView):
@@ -18,3 +18,9 @@ class ProjectsView(ListView):
 class ProjectDetail(DetailView):
     model = Project
     template_name = "ProjectDetail.html"
+
+
+class WorkersView(ListView):
+    model = Worker
+    paginate_by = 20
+    template_name = "Workers.html"
