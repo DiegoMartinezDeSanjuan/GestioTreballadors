@@ -11,8 +11,13 @@ class Project(models.Model):
     def __str__(self):
         return str(self.name)
 
-class Worker (models.Model):
+
+class Worker(models.Model):
     name = models.CharField(max_length=50)
     city = models.CharField(max_length=20)
     professionalOf = models.CharField(max_length=30)
+    age = models.IntegerField()
     numberOfActiveProjects = models.IntegerField()
+
+    def __str__(self):
+        return str(self.name)

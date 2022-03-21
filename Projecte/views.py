@@ -24,3 +24,8 @@ class WorkersView(ListView):
     model = Worker
     paginate_by = 20
     template_name = "Workers.html"
+
+
+class WorkerDetail(DetailView):
+    model = Worker
+    template_name = "WorkersDetail.html"

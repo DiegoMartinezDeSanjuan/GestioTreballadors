@@ -6,7 +6,9 @@
 </head>
 <body>
 <h1>HOME</h1>
-<p>WORKERS</p>
-<p>PROJECTS</p>
+{% comment %}
+<p><a href="{% url 'Projects' PROJECTS.pk %}">PROJECTS</a></p>
+<p><a href="{% url 'Workers' WORKERS.pk %}">WORKERS</a></p>
+{% endcomment %}
 </body>
 </html>

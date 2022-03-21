@@ -7,10 +7,10 @@
 <body>
 <h1>Workers</h1>
 <ul>
-{% for project in object_list %}
-    <li><a href="{% url 'ProjectDetail' project.pk %}">{{ project.name}}</a></li>
+{% for worker in object_list %}
+    <li><a href="{% url 'WorkerDetail' worker.pk %}">{{ worker.name}}</a></li>
 {% empty %}
-    <li>No projects yet.</li>
+    <li>No workers yet.</li>
 {% endfor %}
 </ul>
 </body>
