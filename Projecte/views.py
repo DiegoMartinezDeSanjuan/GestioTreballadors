@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView, ListView, DetailView
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from django.shortcuts import render, redirect
+from django.views.generic import TemplateView, ListView, DetailView, CreateView
 
 # Create your views here.
 from Projecte.models import Project, Worker
@@ -29,3 +32,14 @@ class WorkersView(ListView):
 class WorkerDetail(DetailView):
     model = Worker
     template_name = "WorkersDetail.html"
+
+
+class SignUpView(CreateView):
+    model = User
+    template_name = 'Form.html'
+    form_class = UserCreationForm
+
+    def form_valid(self, form):
+        user = form.save()
+        login(self.request, user)
+        return redirect('home')

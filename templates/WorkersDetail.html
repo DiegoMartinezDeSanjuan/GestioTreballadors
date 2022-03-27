@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "Base.html" %}
+{% block content %}
 <h1>Worker: {{ object.name }}</h1>
 <p>City: {{ object.city }}</p>
 <p>Professional of: {{ object.professionalOf }}</p>
 <p>age: {{ object.age }}</p>
 <p>Active projects: {{ object.numberOfActiveProjects }}</p>
-</body>
-</html>
+{% endblock %}
 

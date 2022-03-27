@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>HOME</title>
-</head>
-<body>
-<h1>HOME</h1>
-{% comment %}
-<p><a href="{% url 'Projects' PROJECTS.pk %}">PROJECTS</a></p>
-<p><a href="{% url 'Workers' WORKERS.pk %}">WORKERS</a></p>
-{% endcomment %}
-</body>
-</html>
+{% extends "Base.html" %}
+{% block content %}
+    <h1>HOME</h1>
+
+    Hi {{ user.username }}!
+
+{% endblock %}

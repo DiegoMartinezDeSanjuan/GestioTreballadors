@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "Base.html" %}
+{% block content %}
 <h1>Project: {{ object.name }}</h1>
 <p>Description: {{ object.description }}</p>
 <p>Status: {{ object.status }}</p>
 <p>Init date: {{ object.init_date }}</p>
-</body>
-</html>
+{% endblock %}
